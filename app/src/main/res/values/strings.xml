@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Product_Display</string>
+    <string name="title_home">News</string>
+    <string name="title_dashboard">Products</string>
+    <string name="title_notifications">Contact</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
