@@ -4,9 +4,14 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -18,6 +23,10 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class NewsFragment extends Fragment {
+
+    private RecyclerView recyclerView;
+    private TextView tv;
+    List<Phone> phones = new ArrayList<>();
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -45,8 +54,6 @@ public class NewsFragment extends Fragment {
     public static NewsFragment newInstance(String param1, String param2) {
         NewsFragment fragment = new NewsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -54,18 +61,26 @@ public class NewsFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_news, container, false);
+        View view = inflater.inflate(R.layout.fragment_news, container, false);
+        tv = (TextView) view.findViewById(R.id.news);
+        tv.setText("puck");
+
+        recyclerView = (RecyclerView) view.findViewById(R.id.list);
+        setInitialData();
+        DataAdapter adapter = new DataAdapter(getActivity(), phones);
+        recyclerView.setAdapter(adapter);
+
+
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -90,5 +105,12 @@ public class NewsFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    private void setInitialData(){
+        phones.add(new Phone ("Huawei P10", "Huawei", R.mipmap.ic_launcher));
+        phones.add(new Phone ("Elite z3", "HP", R.mipmap.ic_launcher));
+        phones.add(new Phone ("Galaxy S8", "Samsung", R.mipmap.ic_launcher));
+        phones.add(new Phone ("LG G 5", "LG", R.mipmap.ic_launcher));
     }
 }
