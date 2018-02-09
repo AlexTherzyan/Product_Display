@@ -16,8 +16,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
-    List<Phone> phones = new ArrayList<>();
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -31,16 +31,16 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     fragment = new StoreFragment();
                     loadFragment(fragment);
-//                    mTextMessage.setText(R.string.title_home);
                     return true;
+
                 case R.id.navigation_dashboard:
                     fragment = new NewsFragment();
                     loadFragment(fragment);
-                  //  mTextMessage.setText("Product");
                     return true;
-                case R.id.navigation_notifications:
 
-          //          mTextMessage.setText(R.string.title_notifications);
+                case R.id.navigation_notifications:
+                    fragment = new ContactFragment();
+                    loadFragment(fragment);
                     return true;
             }
             return false;
@@ -53,26 +53,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.list);
-//        mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-
-//        setInitialData();
-        // создаем адаптер
-//        DataAdapter adapter = new DataAdapter(this, phones);
-//        recyclerView.setAdapter(adapter);
         loadFragment(new StoreFragment());
 
     }
 
-    private void setInitialData(){
-        phones.add(new Phone ("Huawei P10", "Huawei", R.mipmap.ic_launcher));
-        phones.add(new Phone ("Elite z3", "HP", R.mipmap.ic_launcher));
-        phones.add(new Phone ("Galaxy S8", "Samsung", R.mipmap.ic_launcher));
-        phones.add(new Phone ("LG G 5", "LG", R.mipmap.ic_launcher));
-    }
+
 
     private void loadFragment(Fragment fragment) {
         // load fragment
@@ -83,3 +70,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

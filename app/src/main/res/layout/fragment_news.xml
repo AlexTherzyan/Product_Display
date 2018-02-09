@@ -1,22 +1,25 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
+
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.example.a_terzjan.product_display.NewsFragment">
+             tools:context="com.example.a_terzjan.product_display.NewsFragment"
+             android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/news"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello news"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/list"
+
+
+    <FrameLayout
+        android:id="@+id/tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:scrollbars="vertical"
-        />
-     app:layoutManager="LinearLayoutManager"
-</FrameLayout>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>
+
+
