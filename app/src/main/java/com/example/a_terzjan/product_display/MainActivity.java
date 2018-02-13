@@ -6,13 +6,11 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.example.a_terzjan.product_display.Contact.ContactFragment;
+import com.example.a_terzjan.product_display.News.NewsFragment;
+import com.example.a_terzjan.product_display.Product.StoreFragment;
 
 public class MainActivity extends AppCompatActivity {
 

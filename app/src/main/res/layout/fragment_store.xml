@@ -1,14 +1,35 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context="com.example.a_terzjan.product_display.StoreFragment">
+<?xml version="1.0" encoding="utf-8"?>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/store"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello store"/>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#f1f5f7"
+    >
 
-</FrameLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:tools="http://schemas.android.com/tools"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  tools:context="com.example.a_terzjan.product_display.News.NewsFragment"
+                  android:orientation="vertical">
+
+
+
+
+        <FrameLayout
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,10 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#f1f5f7"
+    >
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
 
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.example.a_terzjan.product_display.NewsFragment"
+             tools:context="com.example.a_terzjan.product_display.News.NewsFragment"
              android:orientation="vertical">
 
 
@@ -23,3 +32,4 @@
 </LinearLayout>
 
 
+</android.support.v4.widget.NestedScrollView>

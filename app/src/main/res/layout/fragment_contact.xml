@@ -3,7 +3,7 @@
              android:id="@+id/tv"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context="com.example.a_terzjan.product_display.ContactFragment">
+             tools:context="com.example.a_terzjan.product_display.Contact.ContactFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
