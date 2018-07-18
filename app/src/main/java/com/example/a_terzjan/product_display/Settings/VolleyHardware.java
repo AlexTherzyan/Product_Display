@@ -1,4 +1,4 @@
-package com.example.a_terzjan.product_display;
+package com.example.a_terzjan.product_display.Main;
 
 /**
  * Created by a_terzjan on 09.02.2018.
